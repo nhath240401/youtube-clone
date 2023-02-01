@@ -1,42 +1,40 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 
 const Main = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="main p-3">
+    <div className="main py-lg-3 w-100">
       <iframe
-        width="720"
-        height="400"
         src="https://www.youtube.com/embed/g5Lkz55W_Rc"
         title="BRIGHTON - LIVERPOOL | MÒNG BIỂN TẤN CÔNG NHƯ VŨ BÃO, THE KOP CHOÁNG VÁNG | NGOẠI HẠNG ANH 22/23"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
+        className="mx-md-3"
       ></iframe>
 
-      <div className="description-video">
+      <div className="description-video px-3 px-lg-0 mt-1">
         <div className="hagtag d-flex text-primary">
           <h6 className="me-2">#Brighton</h6>
           <h6 className="me-2">#NgoaiHangAnh</h6>
           <h6 className="me-2">#Liverpool</h6>
         </div>
 
-        <h4>
+        <h4 className="fs-5">
           BRIGHTON - LIVERPOOL | MÒNG BIỂN TẤN CÔNG NHƯ VŨ BẢO, THE KOP CHOÁNG
           VÁNG | NGOẠI HẠNG ANH 22/23
         </h4>
 
-        <div className="d-flex align-items-center justify-content-between align-items-center mt-2">
-          <div className="d-flex align-items-center">
+        <div className="d-md-flex align-items-center justify-content-between align-items-center mt-2">
+          <div className="d-flex align-items-center justify-content-between">
             <img
               src="https://upload.wikimedia.org/wikipedia/vi/9/92/Kplus_logo.png"
               alt="logo"
               className="me-3"
             />
-            <div className="me-4">
+            <div className="me-4 d-flex justify-content-center align-items-center flex-column">
               <h6 className="text-black">Kplus Sports</h6>
               <p>2.4M subscribers</p>
             </div>
@@ -45,9 +43,9 @@ const Main = () => {
               Subscribe
             </div>
           </div>
-          <div className="d-flex align-items-center">
-            <div className="me-3 rounded-5">
-              <button className="">
+          <div className="d-flex align-items-center justify-content-between mb-2">
+            <div className="me-md-3 rounded-5">
+              <button >
                 <i class="fa-regular fa-thumbs-up me-2"></i>
                 12K
               </button>
@@ -56,7 +54,7 @@ const Main = () => {
               </button>
             </div>
 
-            <button className="me-3 rounded-5">
+            <button className="me-md-3 rounded-5">
               <i class="fa-solid fa-share me-2"></i>
               Share
             </button>
@@ -75,43 +73,36 @@ const Main = () => {
             BRIGHTON - LIVERPOOL | MÒNG BIỂN TẤN CÔNG NHƯ VŨ BẢO, THE KOP CHOÁNG
             VÁNG | NGOẠI HẠNG ANH 22/23
           </h5>
-          <a href="#a"
-            onClick={() => setOpen(!open)}
-            aria-controls="collapse"
-            aria-expanded={open}
-          >
-            Show more
-          </a>
-          <Collapse in={open}>
-            <div id="collapse">
-              <h4 className="mt-2">Transcript</h4>
-              <h5>Follow along using the transcript.</h5>
-            </div>
-          </Collapse>
         </div>
 
         <div className="comment mt-4">
-          <h5 className="mx-2">1,259 Comments
-            <span className="mx-5">
+          <span className="mx-2"
+          onClick={() => setOpen(!open)}
+          aria-controls="collapse-comment"
+          aria-expanded={open}
+          >1,259 Comments
+          
+            <span className="mx-4">
               <i class="fa-solid fa-arrow-up-short-wide me-3"></i>
               Sort by
             </span>
-          </h5>
+          </span>
 
-          <div className="d-flex flex-grow-1">
+          <div className="d-lg-flex flex-grow-1 d-none d-lg-block mt-3 w-100">
             <img 
             src="https://i.pinimg.com/originals/ff/a0/9a/ffa09aec412db3f54deadf1b3781de2a.png" 
             alt="" 
             className="me-3"
             />
 
-            <div className="">
+            <div className="w-100">
               <input type="text" placeholder="Viết bình luận..." />
               <hr />
             </div>
           </div>
 
-          <div className="mt-4">
+          <Collapse in={open}>
+          <div className="mt-4" id='collapse-comment'>
             <div className="d-flex mb-3">
               <img
               src="https://upload.wikimedia.org/wikipedia/vi/9/92/Kplus_logo.png"
@@ -162,6 +153,7 @@ const Main = () => {
               </div>
             </div>
           </div>
+          </Collapse>
         </div>
       </div>
 

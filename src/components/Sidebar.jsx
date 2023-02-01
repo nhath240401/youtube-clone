@@ -1,8 +1,7 @@
-
-
 const Sidebar = () => {
   return (
-    <div class="sidebar p-2 d-none d-lg-block">
+    <div className="sidebar p-2">
+      {/* <div class="sidebar p-2 d-none d-lg-block">
       <div className="mx-2 fs-5">
         <i class="fa-solid fa-bars fs-5"></i>
       </div>
@@ -152,6 +151,51 @@ const Sidebar = () => {
         <i class="fa-regular fa-copyright me-1"></i>
         2023 Google LLC
       </span>
+    </div> */}
+
+      <div className="">
+        <i class="fa-solid fa-bars fs-5 mx-5 my-4 d-none d-lg-block cursor-pointer"></i>
+
+        <ul className="d-lg-none d-flex flex-lg-column bg-white position-lg-fixed fixed-bottom w-100 mb-0">
+          <li className="mb-3 p-2 d-flex flex-column justify-content-center align-items-center w-100">
+            <i class="fa-solid fa-house mx-4"></i>
+            Home
+          </li>
+          <li className="mb-3 p-2 d-flex flex-column justify-content-center align-items-center w-100">
+            <i class="fa-solid fa-film mx-4"></i>
+            Shorts
+          </li>
+          <li className="mb-3 p-2 d-flex flex-column justify-content-center align-items-center w-100">
+            <i class="fa-solid fa-circle-play mx-4"></i>
+            Subscriptions
+          </li>
+
+          <li className="mb-3 p-2 d-flex flex-column justify-content-center align-items-center w-100">
+            <i class="fa-solid fa-barcode mx-3"></i>
+            Library
+          </li>
+        </ul>
+
+        <ul className="d-none d-lg-block">
+          <li className="mb-3 p-2 d-flex flex-column justify-content-center align-items-center w-100">
+            <i class="fa-solid fa-house mx-4"></i>
+            Home
+          </li>
+          <li className="mb-3 p-2 d-flex flex-column justify-content-center align-items-center w-100">
+            <i class="fa-solid fa-film mx-4"></i>
+            Shorts
+          </li>
+          <li className="mb-3 p-2 d-flex flex-column justify-content-center align-items-center w-100">
+            <i class="fa-solid fa-circle-play mx-4"></i>
+            Subscriptions
+          </li>
+
+          <li className="mb-3 p-2 d-flex flex-column justify-content-center align-items-center w-100">
+            <i class="fa-solid fa-barcode mx-3"></i>
+            Library
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
