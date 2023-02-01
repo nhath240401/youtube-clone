@@ -15,7 +15,7 @@ ol, ul {
 }
 
 .sidebar{
-  width: 200px;
+  width: 50px;
 }
 
 ul li{
@@ -43,6 +43,7 @@ ul img{
 .navbar input{
   border: none;
   outline: none;
+  width: 400px;
 }
 
 .navbar i{
@@ -106,6 +107,7 @@ ul img{
 .detail input{
   border: none;
   outline: none;
+  width: 400px;
 }
 
 .home button{
@@ -222,3 +224,4 @@ button:hover{
     width: 60%;
   }
 }
+

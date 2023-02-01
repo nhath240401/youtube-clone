@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
+import Tooltip from '@mui/material/Tooltip';
 
 const Main = () => {
   const [open, setOpen] = useState(false);
@@ -45,19 +46,24 @@ const Main = () => {
           </div>
           <div className="d-flex align-items-center justify-content-between mb-2">
             <div className="me-md-3 rounded-5">
+              <Tooltip title='Tôi thích video này'>
               <button >
                 <i class="fa-regular fa-thumbs-up me-2"></i>
                 12K
               </button>
+              </Tooltip>
+              <Tooltip title='Tôi không thích video này'>
               <button>
                 <i class="fa-regular fa-thumbs-down me-2"></i>
               </button>
+              </Tooltip>
             </div>
-
+            <Tooltip title='Chia sẻ'>
             <button className="me-md-3 rounded-5">
               <i class="fa-solid fa-share me-2"></i>
               Share
             </button>
+            </Tooltip>
 
             <button className="rounded-5 px-3 fs-5 d-flex align-items-center py-3">
               <i class="fa-solid fa-ellipsis"></i>

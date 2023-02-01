@@ -1,20 +1,18 @@
-import  React from 'react';
-import { Link } from "react-router-dom";
+import * as React from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
 import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
-import ListItemIcon from '@mui/material/ListItemIcon';
 
-
-
-
-
-const Navbar = () => {
+export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -24,38 +22,21 @@ const Navbar = () => {
     setAnchorEl(null);
   };
   return (
-    <div className="navbar d-flex px-lg-3 w-100">
-      <Link to='/'>
-      <img 
-      src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6.jpg" 
-      alt="youtube_logo"
-      />
-      </Link>
-
-      <div className="d-none d-lg-block">
-      <div className="d-flex align-items-center">
-        <div className="border border-2 rounded-3 p-1">
-          <input type="text" placeholder="Search" className="p-1" />
-          <i class="fa-solid fa-magnifying-glass p-2"></i>
-        </div>
-        <i class="fa-solid fa-microphone mx-3"></i>
-      </div>
-      </div>
-
-        <div className="d-flex align-items-center">
-        <i class="fa-solid fa-magnifying-glass p-2 fs-4 me-4"></i>
-        <i class="fa-solid fa-ellipsis-vertical me-4 fs-4 d-none d-lg-block"></i>
-
-        <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-            <Avatar sx={{ width: 32, height: 32 }}
+    <React.Fragment>
+      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+        <Tooltip title="Account settings">
+          <IconButton
             onClick={handleClick}
             size="small"
+            sx={{ ml: 2 }}
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
-            >M</Avatar>
+          >
+            <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+          </IconButton>
+        </Tooltip>
       </Box>
-
       <Menu
         anchorEl={anchorEl}
         id="account-menu"
@@ -117,9 +98,6 @@ const Navbar = () => {
           Logout
         </MenuItem>
       </Menu>
-      </div>
-    </div>
+    </React.Fragment>
   );
-};
-
-export default Navbar;
+}
