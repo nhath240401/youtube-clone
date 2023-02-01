@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sofia Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ol, ul {
+  padding-left: 0 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sidebar{
+  width: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+ul li{
+  transition: all .3s ease-in;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li:hover{
+  background-color: rgb(231, 228, 224);
+  cursor: pointer;
+}
+
+ul img{
+  width: 25px;
+  height: 25px;
+}
+
+.term p{
+  font-size: 13px;
+  margin-right: 4px;
+  font-weight: 600;
+}
+
+.navbar input{
+  border: none;
+  outline: none;
+}
+
+.navbar i{
+  cursor: pointer;
+}
+
+.navbar img{
+  width: 120px;
+  height: 70px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.topic{
+  width: fit-content;
+}
+
+.topic div{
+  background-color: rgb(206, 204, 204);
+  transition: all .3s ease-in;
+}
+
+.topic div:hover{
+  background-color: rgb(170, 162, 162);
+  cursor: pointer;
+}
+
+
+.video{
+  width: 100%;
+}
+
+.video p{
+  font-size: 15px;
+}
+
+.video img{
+  width: 100%;
+  object-fit: contain;
+}
+
+.video .avatar img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.detail .nav img{
+  width: 120px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.detail input{
+  border: none;
+  outline: none;
+  width: 400px;
+}
+
+.home button{
+  border: 1px solid rgb(142, 141, 244);
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: rgb(70, 70, 131);
+  background-color: #fff;
+  transition: all .3s ease-in;
+}
+
+.btn-signin{
+  border: 1px solid rgb(142, 141, 244);
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: rgb(70, 70, 131);
+  background-color: #fff;
+  transition: all .3s ease-in;
+}
+
+button:hover{
+  background-color: rgb(224, 219, 250);
+}
+
+.detail .main{
+  width: 60%;
+}
+
+.related img{
+  width: 50%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.related .description h6:nth-child(1){
+  font-weight: 700;
+}
+
+.related .description h6:nth-child(2){
+  color: rgb(124, 120, 120);
+}
+
+.related .description p{
+  color: rgb(90, 86, 86);
+}
+
+.main img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.main button{
+  background-color: rgba(230, 227, 227, 0.99);
+  border: none;
+  outline: none;
+  padding: 10px;
+  transition: all .3s ease-in;
+}
+
+.main button:hover{
+  background-color: rgba(183, 179, 179, 0.99);
+}
+
+.main .reaction span{
+  padding: 8px;
+  border-radius: 20px;
+  transition: all .3s ease-in;
+}
+
+.main .reaction span:hover{
+  background-color: rgb(223, 220, 220);
+  cursor: pointer;
 }
