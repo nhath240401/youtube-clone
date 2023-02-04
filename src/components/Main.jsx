@@ -6,7 +6,7 @@ const Main = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="main py-lg-3 w-100">
+    <div className="main py-lg-3 w-100 col">
       <iframe
         src="https://www.youtube.com/embed/g5Lkz55W_Rc"
         title="BRIGHTON - LIVERPOOL | MÒNG BIỂN TẤN CÔNG NHƯ VŨ BÃO, THE KOP CHOÁNG VÁNG | NGOẠI HẠNG ANH 22/23"

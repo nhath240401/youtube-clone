@@ -82,12 +82,13 @@ ul img{
 
 .video img{
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  height: 55%;
 }
 
 .video .avatar img{
   width: 50px;
-  height: 50px;
+  height: 40px;
   border-radius: 50%;
   object-fit: contain;
 }
@@ -133,11 +134,6 @@ ul img{
 button:hover{
   background-color: rgb(224, 219, 250);
 }
-
-.detail .main{
-  width: 60%;
-}
-
 
 .related .description h6:nth-child(1){
   font-weight: 700;

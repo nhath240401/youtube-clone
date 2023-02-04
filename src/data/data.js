@@ -11,7 +11,7 @@ const videos = [
     {
         id: 2,
         img: 'https://i.ytimg.com/vi/uGp3OzsievA/maxresdefault.jpg',
-        avatar: 'data:image/png;base64,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',
+        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkYWXqKVfc8KnIM5cRs8ApqGDaQPC-iVuthP5EE0SJjg&s',
         title: 'LIVERPOOL - BRIGHTON | 90 PHÚT CỦA SIÊU PHẨM',
         username: 'Kplus ',
         viewers: "2.1 Tr viewers",
@@ -20,7 +20,7 @@ const videos = [
     {
         id: 3,
         img: 'https://i.ytimg.com/vi/VMcEjQsuzpc/maxresdefault.jpg',
-        avatar: 'https://vtv1.mediacdn.vn/zoom/260_166/2019/9/26/158752096412840060593915480825543594192306o-15694933324882118926510-crop-15694933450351701225990.png',
+        avatar: 'https://yt3.googleusercontent.com/53V7RU6pWz1ypSTwa7o0pCOCOrzfACeGmDvC5P1HK7Y6LjoSHxKrowpXm_NRBMUmzDX2aGEVSNQ=s900-c-k-c0x00ffffff-no-rj',
         title: 'Những xu hướng thương mại điện tử | VTV24',
         username: 'VTV24',
         viewers: "300 N viewers",

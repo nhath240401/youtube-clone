@@ -7,7 +7,7 @@ import Videos from "../components/Videos";
 
 const Home = () => {
   return (
-    <div class="home d-flex">
+    <div class="home d-flex overflow-hidden">
         <Sidebar />
       <div class="p-2 flex-grow-1">
         <Navbar />

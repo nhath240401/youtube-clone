@@ -43,7 +43,7 @@ const Navbar = () => {
       </div>
 
         <div className="d-flex align-items-center">
-        <i class="fa-solid fa-magnifying-glass p-2 fs-4 me-4"></i>
+        <i class="fa-solid fa-magnifying-glass p-2 fs-4 me-4 d-lg-none"></i>
         <i class="fa-solid fa-ellipsis-vertical me-4 fs-4 d-none d-lg-block"></i>
 
         <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
