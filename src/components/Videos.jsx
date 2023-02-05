@@ -1,6 +1,8 @@
 import videos from "../data/data"
 import VideoItem from "./VideoItem"
 
+import Navbar from "./Navbar"
+
 
 const Videos = () => {
   return (  

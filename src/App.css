@@ -94,7 +94,7 @@ ul img{
 }
 
 .detail iframe{
-  width: 720px;
+  width: 100%;
   height: 400px;
   object-fit: cover;
 }
@@ -217,7 +217,7 @@ button:hover{
 
 @media screen and (min-width: 1024px) {
   .related img{
-    width: 60%;
+    width: 50%;
   }
 }
 

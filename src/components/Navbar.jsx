@@ -1,4 +1,4 @@
-import  React from 'react';
+import { useState } from 'react';
 import { Link } from "react-router-dom";
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
@@ -10,12 +10,12 @@ import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import ListItemIcon from '@mui/material/ListItemIcon';
 
-
-
-
+import videos from '../data/data';
 
 const Navbar = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [query, setQuery] = useState("")
+
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -23,6 +23,8 @@ const Navbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  console.log(videos.filter(video => video.title.toLowerCase().includes(query)))
   return (
     <div className="navbar d-flex px-lg-3 w-100">
       <Link to='/'>
@@ -35,7 +37,7 @@ const Navbar = () => {
       <div className="d-none d-lg-block">
       <div className="d-flex align-items-center">
         <div className="border border-2 rounded-3 p-1">
-          <input type="text" placeholder="Search" className="p-1" />
+          <input type="text" placeholder="Search" className="p-1" onChange={e=> setQuery(e.target.value)} />
           <i class="fa-solid fa-magnifying-glass p-2"></i>
         </div>
         <i class="fa-solid fa-microphone mx-3"></i>
