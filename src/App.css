@@ -95,7 +95,7 @@ ul img{
 
 .detail iframe{
   width: 100%;
-  height: 400px;
+  height: 480px;
   object-fit: cover;
 }
 
@@ -148,9 +148,9 @@ button:hover{
 }
 
 .main img{
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+  width: 55px;
+  height: 45px;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -177,6 +177,11 @@ button:hover{
   cursor: pointer;
 }
 
+.comment .comment-line input{
+    border-bottom: 1px solid #333;
+    padding: 5px;
+}
+
 @media screen and (max-width: 576px) {
   .detail iframe{
     width: 100%;
@@ -193,7 +198,7 @@ button:hover{
 @media screen and (max-width: 576px) {
   .detail iframe{
     width: 100%;
-    height: 220px;
+    height: 250px;
     object-fit: cover;
   }
 
@@ -217,7 +222,8 @@ button:hover{
 
 @media screen and (min-width: 1024px) {
   .related img{
-    width: 50%;
+    width: 60%;
+    object-fit: cover;
   }
 }
 

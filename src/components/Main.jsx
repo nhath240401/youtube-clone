@@ -101,9 +101,8 @@ const Main = () => {
             className="me-3"
             />
 
-            <div className="w-100">
-              <input type="text" placeholder="Viết bình luận..." />
-              <hr />
+            <div className="w-100 comment-line">
+              <input type="text" placeholder="Viết bình luận..." className="w-100" />
             </div>
           </div>
 
